@@ -1,7 +1,7 @@
-import funciones
+import funciones_inicio
 import func_aux
-#import
 
+"""
 perfiles=[
     {
         "usuario":"DCsodio",
@@ -12,8 +12,16 @@ perfiles=[
         "contrasenia":"123456"
     }
 ]
-#print(perfiles)
-
-#print(perfiles[0].get("usuario")) #dcsodio
-
-#funciones.login(perfiles,"DCsodio","156")
+"""
+perfiles=[]
+usuario=""
+clave=""
+opcion=1
+while opcion!=0:
+    opcion=funciones_inicio.menu_inicio()
+    if opcion==1:
+        print("Selecciono la opcion crear perfil")
+        funciones_inicio.crear_perfil(perfiles)
+    elif opcion==2:
+        funciones_inicio.mostrar_perfiles(perfiles)
+print("-adios-")
